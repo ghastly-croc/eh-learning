@@ -9,16 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #D946EF;          /* Bright playful magenta-pink */
+      --primary: #D946EF;
       --primary-hover: #C026D3;
       --primary-dark: #86198F;
-      --accent: #F43F5E;           /* Soft rose accent */
-      --bg-page: #FFF1F5;          /* Visible warm baby-pink background */
-      --card-bg: #FFF7FA;          /* Pale pink card surface */
-      --card-highlight: #FFEBF3;   /* Accent pink card highlight */
-      --border-color: #FBCFE8;     /* Pinkish borders */
-      --text-main: #3B0764;        /* Deep berry purple for readable contrast */
-      --text-muted: #701A75;       /* Muted berry */
+      --accent: #F43F5E;
+      --bg-page: #FFF1F5;
+      --card-bg: #FFF7FA;
+      --card-highlight: #FFEBF3;
+      --border-color: #FBCFE8;
+      --text-main: #3B0764;
+      --text-muted: #701A75;
       --radius: 20px;
     }
 
@@ -68,8 +68,8 @@
     }
 
     .brand-logo img {
-      width: 54px;
-      height: 54px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(217, 70, 239, 0.25);
@@ -78,7 +78,7 @@
 
     .brand-text {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       font-weight: 800;
       color: var(--text-main);
       letter-spacing: -0.5px;
@@ -136,7 +136,7 @@
     }
 
     .btn-outline {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       border: 2px solid var(--primary);
       color: var(--primary-dark);
     }
@@ -179,7 +179,7 @@
     }
 
     .hero h1 {
-      font-size: 3.4rem;
+      font-size: 3.3rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 20px;
@@ -246,7 +246,7 @@
       color: var(--text-muted);
     }
 
-    /* Titles & Cards */
+    /* Section Titles */
     .section-title {
       text-align: center;
       margin: 80px 0 40px;
@@ -264,6 +264,15 @@
       font-size: 1.1rem;
     }
 
+    /* Course Grid: 3 Options */
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    /* Format Grid: 2 Options */
     .cards-grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -275,7 +284,7 @@
       background: var(--card-bg);
       border: 2px solid var(--border-color);
       border-radius: var(--radius);
-      padding: 38px 32px;
+      padding: 36px 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -310,37 +319,43 @@
       box-shadow: 0 4px 10px rgba(217, 70, 239, 0.3);
     }
 
+    .card-icon-badge {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
     .card h3 {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 800;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       color: #4A044E;
     }
 
     .card-desc {
       color: var(--text-muted);
-      font-size: 0.98rem;
-      margin-bottom: 24px;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
     }
 
     .card-list {
       list-style: none;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     .card-list li {
-      margin-bottom: 12px;
+      margin-bottom: 11px;
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 0.95rem;
+      gap: 10px;
+      font-size: 0.93rem;
       color: var(--text-main);
       font-weight: 500;
     }
 
     .card-list li::before {
       content: "🌸";
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .why-grid {
@@ -516,9 +531,9 @@
     <!-- Hero Section -->
     <section class="hero">
       <img src="logo.png" alt="Eh-Learning" class="hero-logo-img" onerror="this.style.display='none'" />
-      <div class="badge">✨ Live Classes on Google Meet</div>
+      <div class="badge">🌸 Interactive Live Classes on Google Meet</div>
       <h1>Speak Confidently.<br>Express Fearlessly.</h1>
-      <p>Transformative live training in Phonics, English teaching, and Public Speaking. Flexible timings personalized around your pace.</p>
+      <p>Transformative live training in Phonics, Spoken English, and Public Speaking. Flexible timings personalized around your day.</p>
       <div class="hero-actions">
         <button class="btn btn-primary" onclick="openDemoModal()">Book a Free Demo Class</button>
         <a href="#courses" class="btn btn-outline">Explore Courses</a>
@@ -542,60 +557,80 @@
         </div>
       </div>
       <div class="feature-item">
-        <div class="feature-icon">📖</div>
+        <div class="feature-icon">🔤</div>
         <div>
-          <h4>Phonics & English</h4>
-          <p>Articulation, flow, and expressive reading.</p>
+          <h4>Phonics Mastery</h4>
+          <p>Sound recognition, blending, and articulation.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-icon">🎤</div>
         <div>
-          <h4>Public Speaking</h4>
-          <p>Overcome stage fright and debate smoothly.</p>
+          <h4>Speech & Fluency</h4>
+          <p>Natural conversation and public speaking confidence.</p>
         </div>
       </div>
     </div>
 
-    <!-- Courses Section -->
+    <!-- Courses Section (3 Options) -->
     <section id="courses">
       <div class="section-title">
-        <h2>Our Core Programs</h2>
-        <p>Curated paths designed to build fluent articulation, confidence, and speech clarity.</p>
+        <h2>Our Three Core Courses</h2>
+        <p>Expert-designed programs matching every stage of a learner's speaking journey.</p>
       </div>
 
-      <div class="cards-grid-2">
-        <!-- Foundational Course -->
+      <div class="cards-grid-3">
+        <!-- 1. Phonics -->
         <div class="card highlighted">
-          <span class="card-tag">Foundational Course</span>
+          <span class="card-tag">Foundational</span>
           <div>
-            <h3>Phonics & English Teaching</h3>
-            <p class="card-desc">Our core foundational track focused on clear phonics sounds, expressive reading, spoken English flow, and practical vocabulary.</p>
+            <div class="card-icon-badge">🔤</div>
+            <h3>Phonics</h3>
+            <p class="card-desc">Master letter sounds, phonetic blending, correct tongue placement, and expressive early reading.</p>
             <ul class="card-list">
-              <li>Comprehensive Phonics rules & tongue positioning</li>
-              <li>Expressive storytelling & emotional reading</li>
-              <li>Spoken conversational fluency & grammar basics</li>
-              <li>Pronunciation & accent clarity drills</li>
-              <li>1-on-1 or group feedback every single class</li>
+              <li>44 phonetic sounds & digraphs</li>
+              <li>Blending & segmenting words</li>
+              <li>Expressive storytelling & reading flow</li>
+              <li>Accent neutralization & clear enunciation</li>
+              <li>Elimination of reading hesitation</li>
             </ul>
           </div>
-          <button class="btn btn-primary" onclick="openDemoModal('Phonics & English Teaching (Foundational)')">Book Demo for Phonics</button>
+          <button class="btn btn-primary" onclick="openDemoModal('Phonics')">Book Demo for Phonics</button>
         </div>
 
-        <!-- Public Speaking & Debate -->
-        <div class="card">
+        <!-- 2. Spoken English -->
+        <div class="card highlighted">
+          <span class="card-tag">Popular</span>
           <div>
-            <h3>Public Speaking & Debate</h3>
-            <p class="card-desc">Structured speaking routines to help learners structure arguments, captivate rooms, and conquer stage hesitation.</p>
+            <div class="card-icon-badge">💬</div>
+            <h3>Spoken English</h3>
+            <p class="card-desc">Build everyday conversational fluency, sentence structure, and vocabulary for confident day-to-day communication.</p>
             <ul class="card-list">
-              <li>Rhetorical frameworks & speech outlines</li>
-              <li>Elimination of filler words ("um", "ah")</li>
-              <li>Impromptu speech rounds & rebuttals</li>
-              <li>Stage presence, eye contact & body language</li>
-              <li>Regular live presentation showcases</li>
+              <li>Natural conversational drills</li>
+              <li>Sentence construction & basic grammar flow</li>
+              <li>Practical everyday vocabulary expansion</li>
+              <li>Overcoming language shyness & hesitation</li>
+              <li>Real-time pronunciation corrections</li>
             </ul>
           </div>
-          <button class="btn btn-outline" onclick="openDemoModal('Public Speaking & Debate')">Book Demo for Speaking</button>
+          <button class="btn btn-primary" onclick="openDemoModal('Spoken English')">Book Demo for Spoken English</button>
+        </div>
+
+        <!-- 3. Public Speaking -->
+        <div class="card">
+          <div>
+            <div class="card-icon-badge">🎙️</div>
+            <h3>Public Speaking</h3>
+            <p class="card-desc">Conquer stage fear, structure impactful presentations, and learn rhetorical confidence in front of an audience.</p>
+            <ul class="card-list">
+              <li>Speech writing & storytelling hooks</li>
+              <li>Overcoming spotlight anxiety & filler words</li>
+              <li>Voice modulation, tone & body language</li>
+              <li>Impromptu speaking (extempore) drills</li>
+              <li>Friendly debates and presentation rounds</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline" onclick="openDemoModal('Public Speaking')">Book Demo for Public Speaking</button>
         </div>
       </div>
     </section>
@@ -604,7 +639,7 @@
     <section id="formats">
       <div class="section-title">
         <h2>Class Formats</h2>
-        <p>Choose the learning environment that best matches your student's comfort level.</p>
+        <p>Choose between focused 1-on-1 mentorship or collaborative small group cohorts.</p>
       </div>
 
       <div class="cards-grid-2">
@@ -697,8 +732,9 @@
         <div class="form-group">
           <label>Selected Program</label>
           <select name="course_format" id="formatSelect">
-            <option value="Phonics & English Teaching (Foundational)">Phonics & English Teaching (Foundational)</option>
-            <option value="Public Speaking & Debate">Public Speaking & Debate</option>
+            <option value="Phonics">Phonics (Foundational)</option>
+            <option value="Spoken English">Spoken English</option>
+            <option value="Public Speaking">Public Speaking</option>
             <option value="1-on-1 Mentorship">1-on-1 Personal Mentorship</option>
             <option value="Group Batch">Interactive Small Batch</option>
           </select>
