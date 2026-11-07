@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eₕ-Learning | Little voices, big dreams</title>
+  <meta name="description" content="Playful, confidence-building phonics, spoken English, and public speaking classes for kids.">
+
+  <style>
+    :root {
+      --purple: #6d2d99;
+      --plum: #42165f;
+      --pink: #ff82b6;
+      --gold: #ffd15c;
+      --lav: #f7f1ff;
+      --ink: #392347;
+      --whatsapp: #25D366;
+      --whatsapp-hover: #20ba5a;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Trebuchet MS", sans-serif;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    a { text-decoration: none; }
+
+    .wrap {
+      max-width: 1080px;
+      margin: auto;
+      padding: 0 22px;
+    }
+
+    /* Header */
+    header {
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+      border-bottom: 1px solid #f1e7fa;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      font-weight: 900;
+      font-size: 1.35rem;
+      color: var(--purple);
+    }
+    .brand sub { font-size: 0.7em; }
+    .links {
+      display: flex;
+      gap: 24px;
+      color: #70587f;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .links a { color: inherit; transition: color 0.2s; }
+    .links a:hover { color: var(--purple); }
+
+    /* Buttons */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(109, 45, 153, 0.25);
+    }
+
+    .secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1.5px solid #d9c1eb;
+      color: var(--purple);
+      font-weight: 700;
+      background: white;
+      transition: all 0.2s ease;
+    }
+    .secondary:hover {
+      border-color: var(--purple);
+      background: var(--lav);
+    }
+
+    .btn-wa {
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+    }
+    .btn-wa:hover {
+      background: var(--whatsapp-hover);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(ellipse at 15% 20%, #ffe7f2, transparent 40%),
+        radial-gradient(ellipse at 90% 10%, #eee1ff, transparent 40%),
+        linear-gradient(135deg, #fffaf5, #fff 60%, #f8efff);
+      padding: 65px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 35px;
+    }
+    .eyebrow {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #f1d9fa;
+      border-radius: 999px;
+      padding: 8px 16px;
+      color: var(--purple);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+    h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin: 18px 0;
+      color: var(--plum);
+    }
+    h1 em { font-style: normal; color: var(--purple); }
+    p { line-height: 1.7; color: #695676; }
+    .hero p { font-size: 1.15rem; max-width: 520px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+
+    /* Mascot Art */
+    .mascot {
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: linear-gradient(145deg, #f7eaff, #fff8fb);
+      border: 3px solid #ead8ff;
+      border-radius: 48% 48% 42% 42%;
+      box-shadow: 0 18px 40px rgba(122, 60, 165, 0.1);
+      overflow: hidden;
+    }
+    .mascot .moon { position: absolute; top: 25px; left: 24px; font-size: 3.5rem; color: #ffd86b; }
+    .mascot .spark { position: absolute; color: #f4b900; font-size: 1.8rem; }
+    .mascot .s1 { top: 35px; right: 30px; }
+    .mascot .s2 { bottom: 45px; left: 30px; }
+    .star { font-size: 8.5rem; line-height: 1; position: relative; z-index: 1; }
+    .face {
+      position: absolute;
+      font-size: 2rem;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      letter-spacing: 6px;
+      user-select: none;
+    }
+    .laptop { font-size: 5rem; position: absolute; bottom: 20px; right: 18%; z-index: 2; }
+    .book { font-size: 4rem; position: absolute; bottom: 35px; left: 17%; z-index: 2; }
+
+    /* Classes */
+    section { padding: 75px 0; }
+    .head { text-align: center; max-width: 650px; margin: 0 auto 36px; }
+    .head h2 { font-size: clamp(2rem, 4vw, 2.7rem); color: var(--plum); margin: 0 0 12px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .card {
+      border: 1px solid #f0e4f8;
+      border-radius: 24px;
+      padding: 30px 24px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(93, 42, 129, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(93, 42, 129, 0.1);
+    }
+    .icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      background: #f6eaff;
+      margin-bottom: 18px;
+    }
+    .card:nth-child(2) .icon { background: #fff0f6; }
+    .card:nth-child(3) .icon { background: #fff6df; }
+    .card h3 { margin: 0 0 8px; color: var(--purple); font-size: 1.3rem; }
+    .card p { margin: 0; font-size: 0.98rem; }
+
+    /* About */
+    .about { background: var(--lav); }
+    .aboutbox { max-width: 760px; margin: auto; text-align: center; }
+    .about h2 { font-size: 2.35rem; color: var(--plum); margin: 0; }
+    .checks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 26px 0 0;
+    }
+    .checks span {
+      background: white;
+      border: 1px solid #ead8f8;
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: #653b82;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .cta {
+      background: linear-gradient(135deg, #7132a0, #9b5ac5);
+      color: #fff;
+      text-align: center;
+      border-radius: 30px;
+      padding: 50px 24px;
+      box-shadow: 0 15px 40px rgba(113, 50, 160, 0.25);
+    }
+    .cta h2 { font-size: 2.4rem; margin: 0 0 12px; }
+    .cta p { color: #f7edff; max-width: 580px; margin: 0 auto 26px; font-size: 1.1rem; }
+    .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .cta .secondary { border: 0; }
+
+    /* Floating WhatsApp Button */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--whatsapp);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 100;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .wa-float:hover {
+      transform: translateY(-2px) scale(1.03);
+      background: var(--whatsapp-hover);
+    }
+    .wa-icon {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #927fa0;
+      font-size: 0.9rem;
+      border-top: 1px solid #f6effc;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .links { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 40px 0; }
+      .mascot { min-height: 290px; order: -1; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 50px 0; }
+      .wa-float span { display: none; }
+      .wa-float { padding: 14px; border-radius: 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#">E<sub>h</sub>-Learning <span style="color:#ffc94d">✦</span></a>
+        <div class="links">
+          <a href="#classes">Classes</a>
+          <a href="#about">Our Approach</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <!-- WhatsApp Header Link -->
+        <a class="pill btn-wa" href="https://wa.me/919596327082?text=Hi!%20I'd%20like%20to%20know%20more%20about%20Eh-Learning%20classes." target="_blank" rel="noopener noreferrer">
+          Chat on WhatsApp ✨
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="wrap grid">
+        <div>
+          <div class="eyebrow">✦ A happy place to learn and shine</div>
+          <h1>Little voices.<br><em>Big dreams.</em></h1>
+          <p>Playful, confidence-building classes where young learners discover the joy of phonics, spoken English, and public speaking—one little step at a time.</p>
+          <div class="actions">
+            <a class="pill btn-wa" href="https://wa.me/919596327082?text=Hi!%20I%20would%20like%20to%20enroll%20my%20child%20in%20Eh-Learning." target="_blank" rel="noopener noreferrer">
+              WhatsApp Us 💬
+            </a>
+            <a class="secondary" href="#classes">Explore classes ✨</a>
+          </div>
+        </div>
+
+        <div class="mascot" aria-label="Cute winking star mascot reading beside a laptop">
+          <div class="moon">☾</div>
+          <span class="spark s1">✦</span>
+          <span class="spark s2">✧</span>
+          <div class="star">⭐</div>
+          <div class="face">• ᴗ ◡</div>
+          <div class="book">📖</div>
+          <div class="laptop">💻</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes">
+      <div class="wrap">
+        <div class="head">
+          <h2>Little skills, lovely big growth</h2>
+          <p>Friendly online lessons to help children learn, express themselves, and feel proud of their progress.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🔤</div>
+            <h3>Phonics</h3>
+            <p>Sounds, letters, blending, and early reading through playful practice and stories.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎤</div>
+            <h3>Public Speaking</h3>
+            <p>Confidence, clear expression, storytelling, and the courage to share ideas aloud.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💬</div>
+            <h3>Spoken English</h3>
+            <p>Everyday conversations, useful vocabulary, and speaking naturally with confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="wrap aboutbox">
+        <h2>A little sparkle in every lesson ✨</h2>
+        <p>At E<sub>h</sub>-Learning, children are encouraged to be curious, try new words, ask questions, and find their own voice. Lessons are warm, interactive, and shaped around young learners.</p>
+        <div class="checks">
+          <span>♡ Child-friendly</span>
+          <span>✦ Interactive</span>
+          <span>☆ Confidence-building</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Ready to sparkle and grow? ✨</h2>
+          <p>Get in touch on WhatsApp to ask about class schedules, batch timings, and the right learning path for your child.</p>
+          <div class="cta-actions">
+            <a class="pill btn-wa" href="https://wa.me/919596327082?text=Hello!%20Please%20share%20the%20details%20and%20schedule%20for%20classes." target="_blank" rel="noopener noreferrer">
+              Chat with us on WhatsApp 💬
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Floating WhatsApp Button -->
+  <a class="wa-float" href="https://wa.me/919596327082?text=Hi!%20I'm%20interested%20in%20Eh-Learning%20classes%20for%20my%20child." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg class="wa-icon" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.476-.15-.677.15-.2.301-.776.979-.951 1.18-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.675-2.085-.175-.301-.019-.464.132-.614.136-.134.301-.351.451-.526.15-.175.2-.3.301-.501.1-.2.05-.376-.025-.526-.075-.15-.677-1.631-.927-2.235-.243-.587-.49-.507-.676-.516-.175-.01-.376-.01-.577-.01-.2 0-.526.075-.802.376-.276.301-1.052 1.028-1.052 2.508 0 1.48 1.077 2.909 1.227 3.109.15.2 2.12 3.238 5.137 4.542.718.311 1.279.497 1.716.636.721.229 1.378.197 1.897.119.579-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.125-.276-.2-.577-.35zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.966-1.302A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+  <footer>
+    Made with a little love and a lot of sparkle ✦ E<sub>h</sub>-Learning
+  </footer>
+
+</body>
+</html>
